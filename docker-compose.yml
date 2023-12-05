@@ -1,0 +1,14 @@
+version: "3.10"
+services:
+  server:
+    build: .
+    ports:
+      - "8443:3000"
+    volumes:
+      - certificates:./certs
+    # environment:
+    #   - CERT_FILE_PATH=certs/fullchain.pem
+    #   - KEY_FILE_PATH=certs/privkey.pem
+
+volumes:
+  certificates:
